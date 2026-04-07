@@ -1,42 +1,43 @@
 <!DOCTYPE html>
-<html lang="en" data-v="16b">
+<html lang="en" data-v="18">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,viewport-fit=cover">
-<title>⚡ JADE SUPREMA v16B</title>
+<title>⚡ JADE SUPREMA v18</title>
 <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0d1117;--bg2:#161b22;--bg3:#1c2331;--bg4:#21293a;
-  --b1:#253145;--b2:#2d3f58;--b3:#374e6b;
-  --txt:#a8c5db;--dim:#4a6478;--hi:#f0c040;--hi2:#c08820;
-  --bull:#22d46e;--bull2:#0b4a28;--bear:#f04060;--bear2:#5a1828;
-  --blue:#2d9cdb;--blue2:#103a55;--cyan:#18c9a8;--cyan2:#064038;
-  --warn:#e8922a;--purp:#9455c8;--r:4px;
+  --bg:#f8f9fa;--bg2:#eef0f3;--bg3:#e4e7ec;--bg4:#d8dce4;
+  --b1:#c8cdd8;--b2:#a8b0c0;--b3:#8890a4;
+  --txt:#1a2332;--dim:#6b7a90;--hi:#b06000;--hi2:#8a4800;
+  --bull:#0a7a3c;--bull2:#d4f0e0;--bear:#c02030;--bear2:#fde8ea;
+  --blue:#1a6aaa;--blue2:#d4e8f8;--cyan:#0a8870;--cyan2:#d0f4ee;
+  --warn:#c05800;--purp:#6a3090;--r:4px;
   --hdr:44px;--cfg:48px;--nav:36px;--ref:34px;--sb:26px;
 }
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html,body{height:100%;overflow:hidden}
 body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospace;font-size:11px;display:flex;flex-direction:column}
 ::-webkit-scrollbar{width:3px;height:3px}
-::-webkit-scrollbar-track{background:var(--bg2)}
+::-webkit-scrollbar-track{background:var(--bg3)}
 ::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
 
 /* ══ AUTH ═══════════════════════════════════════════════════════ */
 #authWrap{
   position:fixed;inset:0;z-index:9999;
-  background:radial-gradient(ellipse at 25% 35%,#131d2e,#0a0f1a 70%);
+  background:radial-gradient(ellipse at 25% 35%,#dde4f0,#f0f4fa 70%);
   display:flex;align-items:center;justify-content:center;padding:16px;overflow-y:auto;
 }
 .abox{
   width:100%;max-width:480px;
-  background:linear-gradient(145deg,#131d2e,#0d1320);
-  border:1px solid var(--b2);border-radius:10px;padding:24px;
+  background:linear-gradient(145deg,#ffffff,#f4f6fa);
+  border:1px solid var(--b1);border-radius:10px;padding:24px;
   position:relative;overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,.12);
 }
 .abox::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
   background:linear-gradient(90deg,transparent 0%,var(--hi) 50%,transparent 100%)}
@@ -56,7 +57,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 .frow{margin-bottom:12px}
 .frow label{display:block;color:var(--dim);font-size:8.5px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
 .finp{
-  width:100%;background:var(--bg);border:1px solid var(--b2);
+  width:100%;background:#fff;border:1px solid var(--b1);
   color:var(--txt);padding:8px 10px;border-radius:var(--r);
   font-family:'JetBrains Mono',monospace;font-size:11px;transition:border-color .2s;
 }
@@ -91,7 +92,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 /* ── Header ─────────────────────────────────────────── */
 .hdr{
   height:var(--hdr);flex-shrink:0;
-  background:linear-gradient(90deg,#0d1421,#111b2e);
+  background:linear-gradient(90deg,#e8ecf4,#dce2ee);
   border-bottom:1px solid var(--b1);
   display:flex;align-items:center;padding:0 12px;gap:12px;
 }
@@ -109,14 +110,14 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 /* ── Config ──────────────────────────────────────────── */
 .cfg{
   height:var(--cfg);flex-shrink:0;
-  background:var(--bg2);border-bottom:1px solid var(--b1);
+  background:var(--bg3);border-bottom:1px solid var(--b1);
   display:flex;align-items:center;padding:0 10px;gap:8px;overflow-x:auto;
 }
 .cfg::-webkit-scrollbar{height:0}
 .cg{display:flex;flex-direction:column;gap:2px;flex-shrink:0}
 .cg label{color:var(--dim);font-size:7.5px;letter-spacing:.5px;text-transform:uppercase}
 .cg select,.cg input{
-  background:var(--bg3);border:1px solid var(--b1);color:var(--txt);
+  background:#fff;border:1px solid var(--b1);color:var(--txt);
   padding:3px 6px;border-radius:var(--r);
   font-family:'JetBrains Mono',monospace;font-size:10px;
 }
@@ -136,7 +137,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 /* ── Nav ─────────────────────────────────────────────── */
 .nav{
   height:var(--nav);flex-shrink:0;
-  background:var(--bg2);border-bottom:1px solid var(--b1);
+  background:var(--bg3);border-bottom:1px solid var(--b1);
   display:flex;align-items:center;padding:0 8px;gap:6px;overflow-x:auto;
 }
 .nav::-webkit-scrollbar{height:0}
@@ -155,7 +156,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 /* ── Refresh strip ───────────────────────────────────── */
 .ref{
   height:var(--ref);flex-shrink:0;
-  background:var(--bg);border-bottom:1px solid var(--b1);
+  background:var(--bg2);border-bottom:1px solid var(--b1);
   display:flex;align-items:center;padding:0 10px;gap:8px;
 }
 .rdot{width:7px;height:7px;border-radius:50%;background:var(--dim);flex-shrink:0}
@@ -163,14 +164,14 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 .rdot.err{background:var(--bear)}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 .rsel{
-  background:var(--bg3);border:1px solid var(--b1);color:var(--txt);
+  background:#fff;border:1px solid var(--b1);color:var(--txt);
   padding:3px 6px;border-radius:var(--r);font-family:'JetBrains Mono',monospace;font-size:9px;
 }
 .rlabel{font-size:9px;color:var(--dim);min-width:80px}
 .rnext{font-size:9px;color:var(--dim);min-width:60px}
 
 /* ══ SPREADS GRID ═══════════════════════════════════════════════ */
-#spreadsWrap{flex:1;overflow-y:auto;overflow-x:hidden;padding:8px;padding-bottom:calc(var(--sb)+8px)}
+#spreadsWrap{flex:1;overflow-y:auto;overflow-x:hidden;padding:8px;padding-bottom:calc(var(--sb)+8px);background:var(--bg)}
 .sgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 @media(max-width:700px){.sgrid{grid-template-columns:1fr}}
 
@@ -190,7 +191,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 
 /* card top bar */
 .ctop{
-  background:var(--bg3);border-bottom:1px solid var(--b1);
+  background:var(--bg2);border-bottom:1px solid var(--b1);
   padding:6px 10px;display:flex;align-items:flex-start;justify-content:space-between;gap:6px;
 }
 .cname{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;
@@ -222,7 +223,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 .cload:hover{background:#2a3e18}
 
 /* 5-cell stats bar */
-.sbar{display:flex;background:var(--bg);border-bottom:1px solid var(--b1)}
+.sbar{display:flex;background:var(--bg3);border-bottom:1px solid var(--b1)}
 .sc{flex:1;padding:5px 4px;text-align:center;border-right:1px solid var(--b1)}
 .sc:last-child{border-right:none}
 .sv{font-family:'Orbitron',monospace;font-size:12px;font-weight:700}
@@ -234,7 +235,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 /* decay legend */
 .dleg{
   display:flex;align-items:center;gap:10px;padding:3px 10px;
-  background:var(--bg);border-bottom:1px dashed var(--b1);font-size:8px;color:var(--dim);
+  background:var(--bg2);border-bottom:1px dashed var(--b1);font-size:8px;color:var(--dim);
   overflow-x:auto;flex-wrap:nowrap;
 }
 .dleg::-webkit-scrollbar{height:0}
@@ -244,7 +245,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 /* chart label row */
 .clbl{
   display:flex;align-items:center;gap:6px;padding:3px 10px;
-  background:var(--bg3);border-bottom:1px solid var(--b1);
+  background:var(--bg2);border-bottom:1px solid var(--b1);
   font-size:8.5px;color:var(--dim);letter-spacing:.5px;text-transform:uppercase;
 }
 .ldot{width:6px;height:6px;border-radius:50%;background:var(--bull);
@@ -252,14 +253,14 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 .clbl-right{margin-left:auto;display:flex;align-items:center;gap:6px}
 
 /* chart containers */
-.cbox{background:var(--bg);position:relative;overflow:hidden}
+.cbox{background:#1a1f2e;position:relative;overflow:hidden}
 .cph{
   height:280px;display:flex;flex-direction:column;
   align-items:center;justify-content:center;color:var(--dim);gap:8px;
 }
 .cph-ico{font-size:28px;opacity:.2}
 .cph p{font-size:9.5px;text-align:center;line-height:1.6;max-width:200px}
-.pnlbox{background:var(--bg);border-top:1px solid var(--b1)}
+.pnlbox{background:#1a1f2e;border-top:1px solid var(--b1)}
 
 /* loading veil */
 .veil{
@@ -275,43 +276,43 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 /* entry row */
 .erow{
   display:flex;align-items:center;gap:6px;padding:4px 8px;
-  background:var(--bg3);border-bottom:1px solid var(--b1);flex-wrap:wrap;
+  background:var(--bg2);border-bottom:1px solid var(--b1);flex-wrap:wrap;
 }
 .einp{
-  width:80px;padding:3px 6px;background:var(--bg);border:1px solid var(--b1);
+  width:80px;padding:3px 6px;background:#fff;border:1px solid var(--b1);
   color:var(--hi);border-radius:var(--r);font-family:'JetBrains Mono',monospace;font-size:10px;
 }
 .einp:focus{outline:none;border-color:var(--blue)}
 .pnlv{font-size:11px;font-weight:700;margin-left:auto}
 .pnlv.pos{color:var(--bull)}.pnlv.neg{color:var(--bear)}.pnlv.neu{color:var(--dim)}
 .ebtn{padding:3px 7px;font-size:8px;border-radius:var(--r);
-  border:1px solid var(--b2);background:var(--bg3);color:var(--dim);cursor:pointer;
+  border:1px solid var(--b2);background:#fff;color:var(--dim);cursor:pointer;
   font-family:'JetBrains Mono',monospace}
 .ebtn:hover{color:var(--txt)}
 
 /* legs collapse */
 .lhdr{
   padding:5px 10px;display:flex;justify-content:space-between;align-items:center;
-  cursor:pointer;background:var(--bg3);border-top:1px solid var(--b1);
+  cursor:pointer;background:var(--bg2);border-top:1px solid var(--b1);
 }
-.lhdr:hover{background:var(--bg4)}
+.lhdr:hover{background:var(--bg3)}
 .lhdr span:first-child{color:var(--dim);font-size:8.5px;letter-spacing:.5px}
 .lhdr span:last-child{color:var(--dim);font-size:8.5px}
 .lbody{display:none;padding:4px 8px 8px}
 .ltbl{width:100%;border-collapse:collapse;font-size:9.5px}
 .ltbl th{color:var(--dim);padding:3px 5px;text-align:left;font-weight:400;
-  border-bottom:1px solid var(--b1);background:var(--bg)}
+  border-bottom:1px solid var(--b1);background:var(--bg3)}
 .ltbl td{padding:3px 5px;border-bottom:1px solid rgba(26,42,56,.4)}
 .sell{color:var(--bear);font-weight:700}.buy{color:var(--bull);font-weight:700}
 .sinp{
-  width:74px;padding:2px 5px;background:var(--bg);border:1px solid var(--b1);
+  width:74px;padding:2px 5px;background:#fff;border:1px solid var(--b1);
   color:var(--cyan);border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:9.5px;
   text-align:right;
 }
 .sinp:focus{outline:none;border-color:var(--blue)}
 
 /* live panel */
-.lpanel{background:var(--bg);border-bottom:1px solid var(--b1)}
+.lpanel{background:#fff;border-bottom:1px solid var(--b1)}
 .lphdr{
   display:flex;align-items:center;justify-content:space-between;
   padding:4px 10px;background:var(--bg3);border-bottom:1px solid var(--b1);
@@ -324,13 +325,13 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 }
 .lltbl{width:100%;border-collapse:collapse;font-size:9.5px}
 .lltbl th{color:var(--dim);padding:2px 8px;font-weight:400;
-  border-bottom:1px solid var(--b1);background:var(--bg)}
+  border-bottom:1px solid var(--b1);background:var(--bg3)}
 .lltbl td{padding:2px 8px;border-bottom:1px solid rgba(26,42,56,.4)}
 
 /* ══ SUMMARY ════════════════════════════════════════════════════ */
 #summaryWrap{
   display:none;flex:1;overflow-y:auto;padding:8px;
-  padding-bottom:calc(var(--sb)+8px);
+  padding-bottom:calc(var(--sb)+8px);background:var(--bg);
 }
 .sumhdr{
   display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap;
@@ -344,7 +345,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 }
 .scard:hover{border-color:var(--b2)}
 .sctop{
-  background:var(--bg3);border-bottom:1px solid var(--b1);
+  background:var(--bg2);border-bottom:1px solid var(--b1);
   padding:5px 9px;display:flex;justify-content:space-between;align-items:center;
 }
 .scn{font-size:9px;font-weight:700;letter-spacing:.5px}
@@ -357,7 +358,7 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 /* ══ STATUS BAR ═════════════════════════════════════════════════ */
 .sbar-foot{
   height:var(--sb);flex-shrink:0;
-  background:var(--bg);border-top:1px solid var(--b1);
+  background:var(--bg2);border-top:1px solid var(--b1);
   display:flex;align-items:center;padding:0 12px;gap:16px;position:fixed;bottom:0;left:0;right:0;
 }
 .sbi{font-size:9px;color:var(--dim)}
@@ -377,6 +378,86 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
 .btn-gold{background:#1c2a08;border-color:var(--hi);color:var(--hi)}
 .card-note{padding:3px 10px;font-size:8.5px;color:var(--warn);
   background:rgba(232,146,42,.07);border-bottom:1px solid rgba(232,146,42,.2)}
+
+/* ══ RECONSTRUCTION MODE ══════════════════════════════════════ */
+.recon-strip{
+  background:#fffbf0;border:1px solid #e8c840;border-radius:6px;
+  margin:6px 8px 2px;padding:6px 10px;
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+}
+.recon-label{color:#8a5800;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.recon-nifty{
+  width:90px;padding:4px 8px;background:#fff;border:1px solid #c8a820;
+  color:#5a3800;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;
+}
+.recon-nifty:focus{outline:none;border-color:#e8a000}
+.recon-btn{
+  padding:4px 10px;border:1px solid #b87800;background:#fff8e0;
+  color:#8a5800;border-radius:3px;font-family:'JetBrains Mono',monospace;
+  font-size:9px;cursor:pointer;
+}
+.recon-btn:hover{background:#fff0c0}
+.recon-info{color:#8a7000;font-size:9px}
+
+/* ══ DATA TABLES ═══════════════════════════════════════════════ */
+.dtable-wrap{
+  overflow-x:auto;max-height:320px;overflow-y:auto;
+  margin:0;border-top:2px solid var(--b1);
+}
+.dtable-wrap::-webkit-scrollbar{width:4px;height:4px}
+.dtable-wrap::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
+
+.dtable{
+  width:100%;border-collapse:collapse;font-size:9.5px;
+  font-family:'JetBrains Mono',monospace;
+}
+.dtable thead tr{
+  background:#2a3548;color:#8aa8c8;position:sticky;top:0;z-index:5;
+}
+.dtable thead th{
+  padding:5px 6px;text-align:right;font-weight:500;
+  border-right:1px solid #3a4a60;font-size:8.5px;letter-spacing:.3px;
+  white-space:nowrap;
+}
+.dtable thead th:first-child,.dtable thead th:nth-child(2){text-align:left}
+.dtable tbody tr{border-bottom:1px solid var(--b1);transition:background .1s}
+.dtable tbody tr:hover{background:rgba(45,156,219,.07)}
+.dtable tbody tr.entry-row-highlight{background:#fff8d0}
+.dtable td{
+  padding:4px 6px;text-align:right;color:var(--txt);
+  border-right:1px solid rgba(200,210,225,.3);white-space:nowrap;
+}
+.dtable td:first-child{text-align:center;font-weight:700;color:var(--dim)}
+.dtable td:nth-child(2){text-align:left;color:var(--dim);font-size:8.5px}
+.td-pos{color:#0a7a3c;font-weight:700}
+.td-neg{color:#c02030;font-weight:700}
+.td-neu{color:var(--dim)}
+.td-hi{color:#b06000;font-weight:700}
+.td-theo{color:#1a6aaa}
+
+/* tab switcher */
+.tab-bar{
+  display:flex;background:var(--bg3);border-bottom:2px solid var(--b1);
+}
+.tab-btn{
+  flex:1;padding:5px 4px;font-size:8.5px;font-family:'JetBrains Mono',monospace;
+  border:none;background:transparent;color:var(--dim);cursor:pointer;
+  border-bottom:2px solid transparent;margin-bottom:-2px;letter-spacing:.3px;
+}
+.tab-btn.active{color:var(--blue);border-bottom-color:var(--blue);background:#fff;font-weight:700}
+.tab-btn:hover:not(.active){color:var(--txt);background:var(--bg4)}
+
+.tab-pane{display:none}
+.tab-pane.active{display:block}
+
+/* section headers inside table area */
+.tbl-section-hdr{
+  padding:4px 8px;background:#2a3548;color:#8aa8c8;
+  font-size:8px;letter-spacing:1px;text-transform:uppercase;
+  border-top:1px solid var(--b1);
+  position:sticky;top:32px;z-index:4;
+}
+
 </style>
 </head>
 <body>
@@ -456,10 +537,19 @@ body{background:var(--bg);color:var(--txt);font-family:'JetBrains Mono',monospac
     <div class="cg"><label>Far Exp</label>
       <select id="sel_far" class="w100"><option>—</option></select></div>
     <div class="csep"></div>
-    <div class="cg"><label>CMP</label>
+    <div class="cg"><label>CMP (live)</label>
       <div style="display:flex;gap:3px;align-items:center">
         <input id="inp_cmp" type="number" class="w80" value="24000" step="25" oninput="onCmp()">
         <button class="cbtn cbtn-d" onclick="fetchSpotCmp()" title="Fetch live NIFTY spot" style="font-size:9px;padding:3px 6px;align-self:stretch">⟳</button>
+      </div></div>
+    <div class="cg"><label>Entry Nifty</label>
+      <div style="display:flex;gap:3px;align-items:center">
+        <input id="inp_entNifty" type="number" class="w80" value="" step="50"
+               placeholder="auto" title="Nifty level on entry date — used for strike construction"
+               oninput="onEntryNifty()">
+        <button class="cbtn cbtn-d" id="btn_fetchEntNifty" onclick="fetchEntryNifty()"
+                title="Auto-fetch Nifty close on entry date from Kite"
+                style="font-size:9px;padding:3px 6px;align-self:stretch">⟳</button>
       </div></div>
     <div class="cg"><label>off1·A</label>
       <input id="inp_o1" type="number" class="w56" value="200" step="25" oninput="onOff()"></div>
@@ -547,7 +637,7 @@ const S = {
   workerUrl:'', apiKey:'', apiSecret:'', accessToken:'',
   instruments:[], instrMap:{}, expiries:[], farExpiries:[],
   expiry:'', farExpiry:'',
-  cmp:24000, off:{o1:200,o2:400,o3:600,o4:800,o6:1200},
+  cmp:24000, entryNifty:0, off:{o1:200,o2:400,o3:600,o4:800,o6:1200},
   tf:'day', from:'', to:'',
   page:0, sumOpen:false,
   charts:{},    // spId → {prem,pnl,cs,el,dl,tl,xl,ps,zl}
@@ -1078,10 +1168,14 @@ function set50dte(){
   if(!exp)return;
   const expDt=new Date(exp+'T00:00:00+05:30');
   const from=new Date(expDt); from.setDate(from.getDate()-50);
-  const to=new Date(Math.min(expDt,new Date()));
+  // Exit at 15 DTE (expiry - 15 days) or today, whichever is earlier
+  const exit15=new Date(expDt); exit15.setDate(exit15.getDate()-15);
+  const to=new Date(Math.min(exit15,new Date()));
   $('inp_from').value=from.toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'});
   $('inp_to').value=to.toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'});
   S.from=$('inp_from').value; S.to=$('inp_to').value;
+  // Auto-fetch entry Nifty for that date if authenticated
+  if(S.accessToken) fetchEntryNifty();
 }
 
 function calcDTE(expiry){
@@ -1214,13 +1308,14 @@ function buildCard(sp){
       <div class="lpnet neu" id="lpnet_${sp.id}">— pts</div>
     </div>
 
+    <div class="chart-area-wrap">
     <!-- DECAY LEGEND -->
     <div class="dleg">
       <div class="dli"><div class="dlw" style="background:#22d46e"></div>Actual OHLC</div>
       <div class="dli"><div class="dlw" style="background:var(--hi);border-top:1px dashed var(--hi)"></div>Entry</div>
       <div class="dli"><div class="dlw" style="background:var(--blue)"></div>Theo decay</div>
       <div class="dli"><div class="dlw" style="background:#22d46e;opacity:.4;border-top:1px dotted #22d46e"></div>TP 50%</div>
-      <div class="dli"><div class="dlw" style="background:var(--bear);border-top:1px dashed var(--bear)"></div>18-DTE exit</div>
+      <div class="dli"><div class="dlw" style="background:var(--bear);border-top:1px dashed var(--bear)"></div>15-DTE exit</div>
       <span id="dr_${sp.id}" style="margin-left:auto;color:var(--dim);font-size:8px;white-space:nowrap"></span>
     </div>
 
@@ -1251,6 +1346,36 @@ function buildCard(sp){
     </div>
     <div class="pnlbox" id="cpnlbox_${sp.id}">
       <div id="cpnl_${sp.id}"></div>
+    </div>
+    </div><!-- /chart-area-wrap -->
+
+    <!-- TAB BAR: Chart vs Tables -->
+    <div class="tab-bar" id="tabs_${sp.id}">
+      <button class="tab-btn active" onclick="switchTab('${sp.id}','chart')">◈ CHART</button>
+      <button class="tab-btn" onclick="switchTab('${sp.id}','prem')">₹ PREMIUM</button>
+      <button class="tab-btn" onclick="switchTab('${sp.id}','pnl')">P&amp;L</button>
+      <button class="tab-btn" onclick="switchTab('${sp.id}','theta')">θ THETA</button>
+    </div>
+
+    <!-- TABLE PANE: Premium -->
+    <div class="tab-pane" id="pane_prem_${sp.id}">
+      <div class="dtable-wrap" id="tprem_${sp.id}">
+        <div style="padding:20px;text-align:center;color:var(--dim);font-size:9px">Load data to see Premium table</div>
+      </div>
+    </div>
+
+    <!-- TABLE PANE: P&L -->
+    <div class="tab-pane" id="pane_pnl_${sp.id}">
+      <div class="dtable-wrap" id="tpnl_${sp.id}">
+        <div style="padding:20px;text-align:center;color:var(--dim);font-size:9px">Load data to see P&amp;L table</div>
+      </div>
+    </div>
+
+    <!-- TABLE PANE: Theta -->
+    <div class="tab-pane" id="pane_theta_${sp.id}">
+      <div class="dtable-wrap" id="ttheta_${sp.id}">
+        <div style="padding:20px;text-align:center;color:var(--dim);font-size:9px">Load data to see Theta table</div>
+      </div>
     </div>
 
     <!-- LEGS COLLAPSE -->
@@ -1286,6 +1411,9 @@ function setDir(id,dir){
   if(!sp||!old)return;
   if(S.charts[id]){try{S.charts[id].prem.remove();S.charts[id].pnl.remove()}catch(_){}}
   delete S.charts[id];
+  // Pass entry Nifty into S.cmp so card rebuilds with correct strikes
+  const entN=parseFloat($('inp_entNifty').value)||0;
+  if(entN>0) S.cmp=entN;
   const newCard=buildCard(sp);
   old.replaceWith(newCard);
   requestAnimationFrame(()=>requestAnimationFrame(()=>{
@@ -1322,8 +1450,8 @@ function mkChart(el,h){
   el.style.height=h+'px';
   return LightweightCharts.createChart(el,{
     width:el.clientWidth||400,height:h,
-    layout:{background:{color:'#0d1117'},textColor:'#3d5568',fontSize:10},
-    grid:{vertLines:{color:'#0c111a'},horzLines:{color:'#0c111a'}},
+    layout:{background:{color:'#1a1f2e'},textColor:'#7a90a8',fontSize:10},
+    grid:{vertLines:{color:'#252d3e'},horzLines:{color:'#252d3e'}},
     crosshair:{mode:LightweightCharts.CrosshairMode.Normal},
     rightPriceScale:{borderColor:'#1a2a38',minimumWidth:52},
     timeScale:{borderColor:'#1a2a38',timeVisible:true,secondsVisible:false,
@@ -1394,11 +1522,16 @@ async function loadData(spId){
   const sp=SP.find(s=>s.id===spId);
   if(!sp)return;
   const dir=S.dirs[spId]||'bear';
-  const cmp=S.cmp, o=getOff();
+  // Use Entry Nifty for strike construction if set, else fall back to CMP
+  const entN=parseFloat($('inp_entNifty').value)||0;
+  const cmp=entN>0?entN:S.cmp;
+  const o=getOff();
   const legs=sp.legs(cmp,o,dir);
   const expiry=$('sel_exp').value;
   const farExp=$('sel_far').value;
-  const interval=$('sel_tf').value;
+  // Always use daily for reconstruction (tables are daily by definition)
+  const entN2=parseFloat($('inp_entNifty').value)||0;
+  const interval = entN2>0 ? 'day' : $('sel_tf').value;
   const from=$('inp_from').value;
   const to=$('inp_to').value;
   if(!expiry||!from||!to){showErr(spId,'⚠ Set expiry and date range first');return}
@@ -1465,6 +1598,7 @@ async function loadData(spId){
     if(bcEl)bcEl.textContent=ohlc.length+' bars';
 
     renderOverlays(spId);
+    buildTables(spId);
     setSb('sbData',`${sp.name}: ${ohlc.length} bars`,'ok');
     if(miss.length){
       const n=$(`card_${spId}`)?.querySelector('.card-note');
@@ -1556,7 +1690,7 @@ function setStat(id,key,val,cls){
   if(e){e.textContent=val;e.className='sv '+cls}
 }
 
-function onEntry(id){renderOverlays(id)}
+function onEntry(id){renderOverlays(id);buildTables(id);}
 
 function setEntryFirst(id){
   const d=S.data[id];if(!d||!d.length)return;
@@ -1708,7 +1842,7 @@ function appendLive(spId,net){
 }
 
 async function quotePage(){
-  fetchSpotCmp();
+  // CMP is NOT auto-updated on every quote refresh — use manual ⟳ button
   const ids=SP.filter(s=>s.pg===S.page).map(s=>s.id);
   await fetchQuotes(ids);
 }
@@ -1734,7 +1868,6 @@ function toggleAuto(){
     $('btnAuto').textContent='■ STOP';
     $('btnAuto').className='btn btn-d';
     const iv=parseInt($('sel_ri').value)||30;
-    fetchSpotCmp();
     quotePage();
     S.countdown=iv;
     S.autoTick=setInterval(()=>{
@@ -1744,7 +1877,6 @@ function toggleAuto(){
     },1000);
     S.autoTimer=setInterval(()=>{
       $('rlabel').textContent=`Live: ON (${iv}s)`;
-      fetchSpotCmp();   // refresh NIFTY spot on every auto-tick
       quotePage();S.countdown=iv;
     },iv*1000);
   }
@@ -1840,6 +1972,236 @@ function showErr(id,msg){
 function setSb(id,txt,cls=''){
   const e=$(id);if(!e)return;
   e.innerHTML=`<span class="${cls}">${txt}</span>`;
+}
+
+// ═══════════════════════════════════════════════════════════════
+// TAB SWITCHER
+// ═══════════════════════════════════════════════════════════════
+function switchTab(spId, tab){
+  const tabBar = $(`tabs_${spId}`);
+  if(!tabBar) return;
+
+  // Update tab buttons
+  tabBar.querySelectorAll('.tab-btn').forEach((btn,i)=>{
+    const tabs = ['chart','prem','pnl','theta'];
+    btn.classList.toggle('active', tabs[i]===tab);
+  });
+
+  // Show/hide chart area (premium OHLC + P&L chart)
+  const chartArea = $(`card_${spId}`)?.querySelector('.chart-area-wrap');
+  if(chartArea) chartArea.style.display = tab==='chart' ? 'block' : 'none';
+
+  // Show/hide table panes
+  ['prem','pnl','theta'].forEach(t=>{
+    const pane = $(`pane_${t}_${spId}`);
+    if(pane) pane.classList.toggle('active', t===tab);
+  });
+}
+
+// ═══════════════════════════════════════════════════════════════
+// ENTRY NIFTY — auto-fetch close price on entry date from Kite
+// ═══════════════════════════════════════════════════════════════
+function onEntryNifty(){
+  const v = parseFloat($('inp_entNifty').value)||0;
+  S.entryNifty = v;
+}
+
+async function fetchEntryNifty(){
+  const from = $('inp_from').value;
+  if(!from){ alert('Set From date first (50-DTE button)'); return; }
+  if(!S.accessToken){ alert('Not authenticated'); return; }
+
+  const btn = $('btn_fetchEntNifty');
+  if(btn){ btn.textContent='…'; btn.disabled=true; }
+  setSb('sbData','Fetching Nifty close on '+from+'…','inf');
+
+  try{
+    // NIFTY 50 index — Kite instrument token 256265, exchange NSE
+    const r = await fetch(
+      `${S.workerUrl}/kite/instruments/historical/256265/day?from=${from} 09:00:00&to=${from} 23:59:00&continuous=0`,
+      { headers:{'Authorization':`token ${S.apiKey}:${S.accessToken}`,'X-Kite-Version':'3'} }
+    );
+    if(!r.ok) throw new Error(await r.text());
+    const d = await r.json();
+    const candles = d?.data?.candles || [];
+
+    // If no candle on that exact date (holiday/weekend), try next 4 days
+    let closePrice = null;
+    if(candles.length > 0){
+      closePrice = candles[0][4]; // [ts, O, H, L, Close, V]
+    } else {
+      // Try next 4 calendar days to find first trading day
+      for(let delta=1; delta<=4; delta++){
+        const tryDate = new Date(from+'T00:00:00+05:30');
+        tryDate.setDate(tryDate.getDate()+delta);
+        const tryStr = tryDate.toLocaleDateString('en-CA',{timeZone:'Asia/Kolkata'});
+        const r2 = await fetch(
+          `${S.workerUrl}/kite/instruments/historical/256265/day?from=${tryStr} 09:00:00&to=${tryStr} 23:59:00&continuous=0`,
+          { headers:{'Authorization':`token ${S.apiKey}:${S.accessToken}`,'X-Kite-Version':'3'} }
+        );
+        if(r2.ok){
+          const d2 = await r2.json();
+          const c2 = d2?.data?.candles||[];
+          if(c2.length>0){ closePrice = c2[0][4]; break; }
+        }
+      }
+    }
+
+    if(!closePrice) throw new Error('No trading data found near '+from);
+
+    // Snap to nearest 50 for strike construction
+    const snapped = Math.round(closePrice/50)*50;
+    $('inp_entNifty').value = snapped;
+    $('inp_cmp').value = snapped;        // also update CMP so strikes calc correctly
+    S.entryNifty = snapped;
+    S.cmp = snapped;
+    onCmp();
+
+    setSb('sbData','Entry Nifty: '+closePrice.toFixed(0)+' → snapped to '+snapped,'ok');
+    $('hCmp').textContent = closePrice.toFixed(0);
+    $('hCmp').style.color = 'var(--warn)';
+
+  } catch(e){
+    setSb('sbData','Entry Nifty fetch failed: '+e.message.slice(0,50),'err');
+  } finally {
+    if(btn){ btn.textContent='⟳'; btn.disabled=false; }
+  }
+}
+
+// ═══════════════════════════════════════════════════════════════
+// BUILD DATA TABLES  (Premium | P&L | Theta)
+// All data is 100% real from Kite OHLC — no estimates
+// Only Theo column uses sqrt formula, labeled explicitly
+// ═══════════════════════════════════════════════════════════════
+function buildTables(spId){
+  const sp = SP.find(s=>s.id===spId);
+  const ohlc = S.data[spId];
+  if(!sp||!ohlc||!ohlc.length) return;
+
+  const expiry = $('sel_exp').value||'';
+  const entryVal = parseFloat($(`entry_${spId}`)?.value);
+  if(isNaN(entryVal)) return;
+
+  const isDebit = sp.type === 'debit';
+  const expTs = expiry ? new Date(expiry+'T15:30:00+05:30').getTime() : null;
+  const entTs = ohlc[0].time * 1000;
+  const entDTE = expTs ? Math.round((expTs - entTs) / 86400000) : 50;
+
+  // Pre-compute all rows
+  const rows = ohlc.map((bar, idx) => {
+    const barTs = bar.time * 1000;
+    const dte = expTs ? Math.max(0, Math.round((expTs - barTs) / 86400000)) : (entDTE - idx);
+    const date = new Date(barTs).toLocaleDateString('en-IN',{
+      timeZone:'Asia/Kolkata', day:'2-digit', month:'short'
+    });
+
+    // P&L (from actual Kite data)
+    const pnl = isDebit ? bar.close - entryVal : entryVal - bar.close;
+
+    // Daily theta (actual day-over-day change in net premium)
+    // For credit: theta = yesterday's close - today's close (positive = good)
+    // For debit:  theta = today's close - yesterday's close (positive = good)
+    let dailyTheta = null;
+    if(idx > 0){
+      const prev = ohlc[idx-1].close;
+      dailyTheta = isDebit ? (bar.close - prev) : (prev - bar.close);
+    }
+
+    // Cumulative theta (running sum of daily thetas from entry)
+    // = total premium decayed since entry
+    // For credit: entryVal - bar.close = how much premium eroded
+    // For debit:  bar.close - entryVal = how much premium grew
+    const cumTheta = isDebit ? bar.close - entryVal : entryVal - bar.close;
+
+    // Theoretical premium (sqrt of time remaining — benchmark only)
+    // Labeled [THEO] in table header so it's clear
+    let theo = null;
+    if(expTs){
+      const remMs = Math.max(expTs - barTs, 0);
+      const fracLeft = remMs / Math.max(expTs - entTs, 1);
+      theo = Math.round(entryVal * Math.sqrt(fracLeft) * 10) / 10;
+    }
+
+    // Drift = how much actual decayed MORE than theoretical
+    // Positive drift = actual decayed more (IV crush, good for credit)
+    // Negative drift = actual decayed less (IV expansion, bad for credit)
+    const drift = (theo !== null) ? Math.round((entryVal - bar.close - (entryVal - theo)) * 10) / 10 : null;
+
+    return { dte, date, bar, pnl, dailyTheta, cumTheta, theo, drift, isEntry: idx===0 };
+  });
+
+  // ── TABLE 1: PREMIUM ─────────────────────────────────────────
+  const premHTML = `<table class="dtable">
+    <thead><tr>
+      <th>DTE</th><th>Date</th>
+      <th>Open</th><th>High</th><th>Low</th><th>Close</th>
+    </tr></thead>
+    <tbody>
+    ${rows.map(r=>`<tr class="${r.isEntry?'entry-row-highlight':''}">
+      <td>${r.dte}</td>
+      <td>${r.date}${r.isEntry?' ★':''}</td>
+      <td>${r.bar.open.toFixed(1)}</td>
+      <td class="td-pos">${r.bar.high.toFixed(1)}</td>
+      <td class="td-neg">${r.bar.low.toFixed(1)}</td>
+      <td style="font-weight:700">${r.bar.close.toFixed(1)}</td>
+    </tr>`).join('')}
+    </tbody>
+  </table>`;
+  const tp = $(`tprem_${spId}`);
+  if(tp) tp.innerHTML = premHTML;
+
+  // ── TABLE 2: P&L ─────────────────────────────────────────────
+  const pnlHTML = `<table class="dtable">
+    <thead><tr>
+      <th>DTE</th><th>Date</th>
+      <th>Net Prem</th><th>P&amp;L pts</th><th>P&amp;L %</th>
+    </tr></thead>
+    <tbody>
+    ${rows.map(r=>{
+      const pnlPct = entryVal ? (r.pnl/entryVal*100) : 0;
+      const pCls = r.pnl>0?'td-pos':r.pnl<0?'td-neg':'td-neu';
+      return `<tr class="${r.isEntry?'entry-row-highlight':''}">
+        <td>${r.dte}</td>
+        <td>${r.date}${r.isEntry?' ★':''}</td>
+        <td>${r.bar.close.toFixed(1)}</td>
+        <td class="${pCls}">${r.pnl>=0?'+':''}${r.pnl.toFixed(1)}</td>
+        <td class="${pCls}">${r.pnl>=0?'+':''}${pnlPct.toFixed(1)}%</td>
+      </tr>`;
+    }).join('')}
+    </tbody>
+  </table>`;
+  const tpnl = $(`tpnl_${spId}`);
+  if(tpnl) tpnl.innerHTML = pnlHTML;
+
+  // ── TABLE 3: THETA ────────────────────────────────────────────
+  const thetaHTML = `<table class="dtable">
+    <thead><tr>
+      <th>DTE</th><th>Date</th>
+      <th>Net Prem</th>
+      <th>Daily θ</th>
+      <th>Cumul θ</th>
+      <th>[THEO]</th>
+      <th>Drift</th>
+    </tr></thead>
+    <tbody>
+    ${rows.map(r=>{
+      const dtCls = r.dailyTheta!==null?(r.dailyTheta>0?'td-pos':r.dailyTheta<0?'td-neg':'td-neu'):'td-neu';
+      const cumCls = r.cumTheta>0?'td-pos':r.cumTheta<0?'td-neg':'td-neu';
+      const drCls = r.drift!==null?(r.drift>0?'td-pos':r.drift<0?'td-neg':'td-neu'):'td-neu';
+      return `<tr class="${r.isEntry?'entry-row-highlight':''}">
+        <td>${r.dte}</td>
+        <td>${r.date}${r.isEntry?' ★':''}</td>
+        <td>${r.bar.close.toFixed(1)}</td>
+        <td class="${dtCls}">${r.dailyTheta!==null?(r.dailyTheta>=0?'+':'')+r.dailyTheta.toFixed(1):'—'}</td>
+        <td class="${cumCls}">${r.cumTheta>=0?'+':''}${r.cumTheta.toFixed(1)}</td>
+        <td class="td-theo">${r.theo!==null?r.theo.toFixed(1):'—'}</td>
+        <td class="${drCls}">${r.drift!==null?(r.drift>=0?'+':'')+r.drift.toFixed(1):'—'}</td>
+      </tr>`;
+    }).join('')}
+    </tbody>
+  </table>`;
+  const ttheta = $(`ttheta_${spId}`);
+  if(ttheta) ttheta.innerHTML = thetaHTML;
 }
 
 // ═══════════════════════════════════════════════════════════════
